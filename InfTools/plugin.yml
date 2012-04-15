@@ -1,0 +1,11 @@
+name: InfTools
+main: com.rakosmanjr.InfTools.InfTools
+version: 1.0.0
+description: Allows permission based tool durability.
+authors: [rakosmanjr]
+commands:
+  inftool:
+    description: Sets all tools to have infinite durability.
+    usage: /inftool
+    permission: inftools.inftool
+    permission-message: You don't have permission to use that command!
