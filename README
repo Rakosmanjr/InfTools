@@ -1,0 +1,13 @@
+Version 1.2.0 of InfTools
+
+
+Makes tools never break and has permissions support! You never have to worry about crafting a new tool or losing that rare enchantment, ever again!
+
+How to use:
+
+First make sure that the player, or group has the proper permission node
+
+inftools.inftool
+Then all you have to do is use the "/inftool" command to turn on infinite tools.
+
+If you want to turn it off, then just use the "/inftool" command again.

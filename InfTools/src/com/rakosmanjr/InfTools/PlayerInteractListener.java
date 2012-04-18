@@ -16,7 +16,7 @@ public class PlayerInteractListener implements Listener
 	{
 		this.plugin = plugin;
 		
-		allowedIDs = new int[26];
+		allowedIDs = new int[28];
 		allowedIDs[0] = 267;//iron sword
 		allowedIDs[1] = 255;//iron shovel
 		allowedIDs[2] = 257;//iron pick
@@ -43,20 +43,24 @@ public class PlayerInteractListener implements Listener
 		allowedIDs[23] = 279;//diamond axe
 		allowedIDs[24] = 293;//diamond hoe
 		allowedIDs[25] = 346;//fishing pole
+		allowedIDs[26] = 261;//bow
+		allowedIDs[27] = 259;//flint & steel
 	}
 	
 	@EventHandler
 	public void onPlayerInteract (PlayerInteractEvent event)
 	{
-		if (!event.equals(null))
+		try
 		{
 			Player player = event.getPlayer();
 			ItemStack itemStack = event.getItem();
 			Material mat = itemStack.getType();
+			
 			if (mat.isBlock() || mat.isEdible() || mat.isRecord())
 			{
 				return;
 			}
+			
 			if (plugin.isInfTool.containsKey(player.getName()) ? plugin.isInfTool
 					.get(player.getName()) : false)
 			{
@@ -76,6 +80,10 @@ public class PlayerInteractListener implements Listener
 					}
 				}
 			}
+		}
+		catch (Exception e)
+		{
+			
 		}
 	}
 }

@@ -64,6 +64,8 @@ public class InfTools extends JavaPlugin
 				if (args.length == 0)
 				{
 					this.isInfTool.put(player.getName(), this.isInfTool.containsKey(player.getName()) ? !this.isInfTool.get(player.getName()) : true);
+					player.sendMessage("InfTools is " + (isInfTool.get(player.getName()) ? "on" : "off"));
+					return true;
 				}
 				else
 				{
